@@ -1,125 +1,96 @@
-# AIX Media Bridge 0.5.0 — macOS preview
+# AIX Media Bridge
 
-Version 0.5.0 adds independent Mandarin TTS, word-timed subtitles, editable Resolve text/audio tracks and native AAC export. See [the narrated workflow](docs/NARRATED-VIDEO.md). One new AIX job and a separate voiced editing project were verified on the same Mac, with recorded recovery interventions. The intro remains a workflow validation sample; its visual style was not approved as a promotional example. Sealed 0.4.2 artifacts are unchanged.
+用 Codex 把参考图做成视频，再接着完成配音、字幕和达芬奇剪辑。
 
-A local macOS CLI and project skill for making images and videos in your own logged-in AIX browser session. The workflow uploads one PNG, prepares and checks native Agent cards, generates one PRO image and one Seedance video, downloads the original video once, and verifies the saved canvas and local file.
+AIX Media Bridge 是一套给 Codex 使用的视频制作 Skill，带有配套的本地工具。你提供参考图，说明想拍什么、给谁看、希望是什么风格，Codex 就可以按照这套流程，在你自己的 AIX 账号里生成素材，再把素材送进 DaVinci Resolve，制作成片。
 
-The local editing adapter continues into a new DaVinci Resolve project, a 24 fps timeline and a native MP4 export. Includes an account-redacted 15-second story case and preview frames. [中文完整上手指南](docs/QUICKSTART.zh-CN.md) · [Case video and explanation](examples/aix-story/README.md) · [Release notes](docs/CHANGELOG.md).
+**当前为 macOS 预览版。** [下载 0.5.0](https://github.com/jonathanbigbro/aix-media-bridge/releases/tag/v0.5.0) · [中文上手指南](docs/QUICKSTART.zh-CN.md) · [查看案例](examples/aix-story/README.md)
 
-This is an early release for **macOS, Node.js >=22.12.0, Chrome and AIX in Simplified Chinese**. It uses the native AIX interface through Chrome DevTools MCP. It is not an official AIX API client. Browser login and Chrome authorization remain on your computer.
+## 少做一些工具之间的来回操作
 
-0.4.2 fixes concurrent status commands overwriting production ledgers. Status is now local and read-only throughout the CLI/daemon/operation chain, with no browser target binding. All job mutations and result invalidation use verified task ownership and an exclusive mutation transaction. The 0.4.1 parameter and image-card guards remain enabled. See the [lock protocol](docs/CONCURRENCY.md) and exact [validation scope](docs/VALIDATION.md). The 0.5.0 production path completed after native-card, history and HTTP-status compatibility repairs; this is not an unattended first-run or cross-machine claim.
+做一条 AI 视频，常常要先上传参考图、选模型、设参数，等图片和视频生成后下载，再去准备配音、对字幕、打开剪辑软件，最后导出。
 
-## Install
+这个 Skill 的目的，就是把这些步骤接起来，让你能在 Codex 里连续推进一条视频的制作。它会记录每个任务做到了哪一步，保留已经完成的结果，方便继续剪辑或检查中断的任务。
 
-Install Node.js >=22.12.0, Python 3.9+ and the Apple command-line tools providing `swiftc`. The editing stage also needs a supported local DaVinci Resolve Studio scripting installation; Studio 19 was tested. Open a terminal in this repository:
+你负责表达创意、选择画面、判断成片是否满意；Codex 按 Skill 操作工具、整理素材、推进制作。画面风格和故事节奏仍需要一起打磨。
+
+参考图和创作要求 → AIX 图片与视频 → 配音和字幕 → 达芬奇剪辑 → MP4 与可编辑工程
+
+## 已经可以做的事
+
+1. **在 AIX 里生成素材。** 新建或选择画布，上传一张参考 PNG，生成一张 PRO 图片，再用这张图片生成一条短视频，下载原始视频文件。
+2. **检查参数，保留进度。** 生成前核对模型、参考图、数量等设置，记录提交和下载情况。遇到中断时先检查原任务，再恢复已有进度；无法确认发生了什么时会停下来，避免直接重复生成。
+3. **配旁白、对字幕。** 用独立的语音工具生成普通话旁白，保存音频，并按实际说话时间安排中文字幕。需要改配音时，可以单独重做音频，继续使用已有的 AIX 素材。
+4. **在达芬奇里剪成片。** 新建独立工程，把视频、旁白、字幕和标题放进真实时间线，调整剪辑与音量，导出有声音的 MP4。项目里的音轨和文字保留为可继续修改的内容。
+5. **检查导出的文件。** 核对视频帧数、尺寸、音轨、素材链接，以及配置好的遮罩是否出现在成片中。画面是否好看、字幕是否舒服、旁白是否自然，还要结合实际播放检查。
+
+完整有声制作后，可以拿到成片 MP4、达芬奇工程备份及配套素材，以及旁白 WAV、文案和 SRT 字幕。也可以只做到 AIX 生成并下载素材这一步。
+
+## 可以这样告诉 Codex
+
+在 Codex 中打开本项目后，提供一张参考 PNG，例如：
+
+> 使用本项目的 aix-media-workflow。参考这张图，制作一个男生坐在电脑前操作 AIX 的镜头。先生成一张图片，再生成一条 5 秒、720p、16:9 的视频，下载到本地。
+
+有了确认使用的素材后，可以继续：
+
+> 把这些素材剪成一条 30 秒的中文介绍片。先规划内容并准备普通话旁白，再安排画面和字幕，在达芬奇里完成剪辑，交付有声 MP4 和能继续修改的工程。
+
+第一次使用需要完成本机安装、AIX 登录和 Chrome 连接授权。之后根据你的制作要求推进；生成会使用你自己的 AIX 额度。
+
+## 看一个已完成的案例
+
+仓库里有一条 15 秒的“男生操作 AIX”故事短片：输入想法、生成画面、查看成果，三个镜头在达芬奇中完成剪辑。
+
+[![男生操作 AIX 的案例画面](examples/aix-story/shot-1-typing.png)](examples/aix-story/README.md)
+
+[查看成片与制作说明](examples/aix-story/README.md) · [打开 MP4](examples/aix-story/aix-story.mp4)
+
+这个公开案例是无声片，画面由模型生成，属于故事化展示。它没有展示精确的软件操作录屏。有声剪辑也已在本机完成制作验证，配套方法见 [配音、字幕与有声剪辑说明](docs/NARRATED-VIDEO.md)。
+
+## 使用前了解这些范围
+
+这是一个非官方开源项目，目前支持 Mac、Chrome 和 AIX 简体中文界面。每次 AIX 任务使用一张参考 PNG，生成一张 PRO 图片和一条 Seedance2.0（真人）视频；视频支持 4 或 5 秒、720p、16:9。平台生成的原视频时长可能略有偏差，精确的成片长度在剪辑时处理。
+
+有声剪辑目前验证的是 30 秒、1280×720、24fps，使用 DaVinci Resolve Studio 19。其他模型、批量任务、多参考图、Windows/Linux，以及其他 Resolve 版本尚未验证。
+
+本机已经完成 AIX 生成与下载，也完成了有声达芬奇工程和导出。实测中仍有需要排查、修复后继续运行的情况；遇到平台改版或无法确认的异常，可能需要介入处理。91 项自动测试与同机安装检查已通过，另一台电脑和新账号尚未实测。具体记录见 [验收范围](docs/VALIDATION.md)。
+
+<details>
+<summary>首次安装的环境要求和命令</summary>
+
+需要 Node.js >=22.12.0、Python 3.9+、Apple 命令行工具提供的 Swift 编译器，以及 Chrome。继续剪辑时还需要本机的 DaVinci Resolve Studio 及其脚本接口。下载包不包含这些软件或授权。
+
+在项目目录安装并检查环境：
 
 ```sh
 npm run setup
 npm run test:all
 npm run doctor
+```
+
+用 Chrome 登录自己的 AIX，打开 `https://aix.studio/AixCanvas`。在独立终端启动连接工具并保持运行：
+
+```sh
 npm run bridge
 ```
 
-Keep the bridge running in that terminal. Open `https://aix.studio/AixCanvas` in your logged-in Chrome profile. Approve Chrome's remote-debugging prompt when requested. In a second terminal:
+连接检查、创建画布、配置素材和恢复任务的完整步骤见 [中文上手指南](docs/QUICKSTART.zh-CN.md)。需要停止连接工具时运行 `npm run stop`；有任务进行时会拒绝停止。
 
-```sh
-npm run doctor -- --live
-npm run project -- create --key demo --name "AIX Demo"
-```
+</details>
 
-To use an existing canvas, open it in AIX and run `npm run project -- bind --key demo`, or select it by its exact, unique name:
+## 素材和账号放在哪里
 
-```sh
-npm run project -- select --key demo --name "My Canvas"
-npm run project -- open --key demo
-npm run project -- list
-```
+AIX 使用你在 Chrome 中已登录的账号，不需要把账号密码写入项目。生成素材和制作记录保存在本机；配音可使用独立的在线 TTS 服务，旁白文本会发送给所选语音服务。达芬奇工程和剪辑导出在本机完成。
 
-If several AIX canvas tabs are open, use `npm run project -- pages`, then add `--page NUMBER` to the project command. Media commands identify the bound canvas by its stored identity. Project names in history must be unique among the matching visible entries; ambiguous names fail closed.
+公开仓库只带源码、模板和已审阅的案例。账号绑定、任务配置、账本、日志、原始素材和私人达芬奇工程都排除在发布包外。分享自己的成片前，仍要检查画面里是否出现账号、余额或私人目录。
 
-`create` records its attempt before clicking. Repeating the same key and name returns the existing binding or reconciles the original attempt. An unknown result is not permission to create another canvas. Save any ongoing edits and finish active generation before switching canvases.
+## 进一步使用
 
-## Make a video
+- [中文上手指南](docs/QUICKSTART.zh-CN.md)：从安装到生成、下载和剪辑。
+- [有声制作说明](docs/NARRATED-VIDEO.md)：配音、字幕、音轨、成片验收。
+- [达芬奇剪辑说明](docs/DAVINCI.md)：素材导入、时间线、遮罩和工程备份。
+- [项目 Skill](.agents/skills/aix-media-workflow/SKILL.md)：Codex 执行制作时使用的流程。
+- [版本记录](docs/CHANGELOG.md) · [验证记录](docs/VALIDATION.md) · [发布与脱敏规则](docs/RELEASING.md)
 
-The repository includes a synthetic reference image without account information.
-
-```sh
-mkdir -p configs
-cp examples/media-job.template.json configs/MY-MEDIA-001.json
-```
-
-Edit the job ID, `project.key`, prompts, reference path and output directory. The template uses project key `demo`, one PRO image and a 5-second video. Relative paths are resolved from the configuration file's directory.
-
-```sh
-npm run media -- plan --job configs/MY-MEDIA-001.json
-npm run media -- run --job configs/MY-MEDIA-001.json
-```
-
-Only run after `plan` returns `validated-plan`. Plan does not upload, chat or generate. Generation uses account credits in AIX. Each job permits one upload, one image Agent request, one image submission, one video Agent request, one video submission and one native video download.
-
-```sh
-npm run media -- status --job configs/MY-MEDIA-001.json
-npm run media -- resume --job configs/MY-MEDIA-001.json
-```
-
-A submitted-parameter mismatch or missing required historical evidence persists as `blocked-submitted-parameters`. Run, resume, asset checks, completed recovery and manifest creation enforce it. Status reports a local diagnostic snapshot without changing ledger/result/manifest bytes or accessing the browser; existing assets and original request evidence are retained. During a locked run/resume or verification, a previously misleading completed manifest is marked blocked and its original bytes are kept in a private invalidated-result copy. Do not edit the original request to clear the block. Native output duration drift is recorded separately.
-
-A repeated job reuses its ledger. Do not change its configuration or reference bytes after it starts. Do not delete its ledger or invent another ID to retry an unknown result. Completed jobs only reconcile and verify; they do not generate again. Unknown states may require inspection in the original AIX session. Recovery after every possible browser or server failure is not guaranteed.
-
-## Supported media
-
-| Item | Supported values |
-|---|---|
-| Input | One PNG, at most 5 MiB; each dimension at most 4096 |
-| Image | PRO / `main_image` / workflow `248`; 16:9, 2k, one image |
-| Video | Seedance2.0（真人） / `1888` / workflow `225`; 4 or 5 seconds, 16:9, 720p, one video |
-| Photography and lighting | The fixed combination in the template; AIX prompt descriptions, not independent camera controls |
-| Output | Original image, original native video, reference copy and JSON manifest |
-
-Requested duration and measured duration are separate. The manifest reports container duration, video-track duration and browser duration. Native results may differ slightly from the requested whole seconds. Files are not trimmed or transcoded. Frame decoding and identity/hash checks do not replace visual review of the creative result.
-
-Other operating systems, models, aspect ratios, multi-reference input, batch generation, team-canvas administration and server-side cancellation recovery are outside this release's validation scope. The interface must provide the native manual-confirmation mode; if unavailable, generation stops.
-
-## Continue in DaVinci Resolve
-
-A local Python adapter imports completed AIX image/video pairs into a new Resolve project, assembles each video into a 5-second segment, applies configured Fusion privacy masks and exports a native MP4 plus an editable local project backup. Requires Python 3.9+ and a supported Resolve Studio scripting installation; tested on Studio 19.
-
-```sh
-npm run edit -- doctor
-npm run edit -- plan --job configs/MY-EDIT-001.json
-npm run edit -- run --job configs/MY-EDIT-001.json
-npm run test:resolve
-```
-
-Copy the [configuration template](examples/resolve-job.template.json) into `configs/`, point it to your completed AIX manifests, and follow the [Resolve workflow and validation](docs/DAVINCI.md). The included movie is a reviewed showcase; private source media and native project backups are not included.
-
-## Local data and publishing
-
-- `.aix/` contains local project bindings, creation attempts, bridge logs and temporary pipe directories.
-- `jobs/` contains task ledgers, prompts and sanitized protocol evidence. `outputs/` contains generated media and manifests.
-- `configs/` and `inputs/` are private working directories, excluded from the distributable.
-- No login cookie or API token is required in configuration. Authentication stays in Chrome. Network headers are excluded from persisted evidence. Local prompts, canvas names and media can still be personal, so runtime folders are never published.
-- Chrome's download directory defaults to your `Downloads` folder. Set `AIX_DOWNLOAD_DIR` to an alternate directory before starting the bridge and media CLI if needed. Set the same `AIX_STATE_DIR` for both only when deliberately selecting a different local state directory. Neither directory belongs in a release.
-
-Builds use an explicit file allowlist, reject symlinks and scan the selected bytes. The zip is made from the same audited bytes and contains no original Git history or runtime folders. See [release procedure](docs/RELEASING.md) and [validation record](docs/VALIDATION.md).
-
-Only the four previously reviewed media files listed in `scripts/release-media.json` are allowed as real case assets. The builder checks their exact hashes and review record. Changed or additional media requires a fresh visual and metadata review. The package contains source code, not a bundled Chrome, Resolve, Python or Node installation.
-
-## Project skill
-
-The skill is included at `.agents/skills/aix-media-workflow/SKILL.md`. It lives with the CLI so it can resolve this repository without machine-specific paths. Example:
-
-> Use aix-media-workflow to make a 5-second video from this PNG in my bound `demo` canvas, with a slow camera push-in.
-
-## Stop
-
-```sh
-npm run stop
-```
-
-Shutdown refuses while a job lock is owned by a running process or the selected canvas is busy. Keep the original browser session and local ledgers when recovering a job. A stale socket is reported for inspection rather than overwritten.
-
-## License
-
-[MIT](LICENSE).
+[MIT 许可证](LICENSE)。

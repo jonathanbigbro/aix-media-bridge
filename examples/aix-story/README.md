@@ -24,4 +24,4 @@
 
 本目录仅含成片、预览帧、文件哈希和检查说明。PNG 已移除附带元数据；MP4 元数据检查未发现账号或本机路径。原生工程、登录状态、任务账本、原始请求及失败导出不在本目录。文件对应关系见 `manifest.json`，检查范围见 `privacy-review.json`。
 
-案例目前仅在本地整理，尚未发布到 GitHub。
+案例已随 [0.5.0 macOS 预览版](https://github.com/jonathanbigbro/aix-media-bridge/releases/tag/v0.5.0) 公开发布；本目录中的成片和预览图保持原先审阅通过的字节。

@@ -43,8 +43,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 9541,
-      "sha256": "d05af20107642291a29eda43537dd0195031cb7693895633c32f94779afdd313"
+      "bytes": 6942,
+      "sha256": "4076825b4ce7c1cf85db9002f60066d1776079caabf77ceadc0384a285fd34d2"
     },
     {
       "path": "audio/captions.py",
@@ -238,8 +238,8 @@
     },
     {
       "path": "docs/QUICKSTART.zh-CN.md",
-      "bytes": 7058,
-      "sha256": "5e45339288634b64de608a403854dec7188e004f0bf6c1fbcce3e65283dd86b2"
+      "bytes": 7099,
+      "sha256": "e1a4f08462d70c553c6d84a7d92cf07dc47ea6a93e934406ab63db740a2ca591"
     },
     {
       "path": "docs/RELEASING.md",
@@ -253,8 +253,8 @@
     },
     {
       "path": "examples/aix-story/README.md",
-      "bytes": 1859,
-      "sha256": "57fc9b778a00191fce28694ebb0a8e4cf5d76e779a81f356ba839de85f2149e6"
+      "bytes": 1994,
+      "sha256": "c05cd4db6ea6749832cb406f858d74648ea3003841b13c27ddab0d85a17b3010"
     },
     {
       "path": "examples/aix-story/aix-story.mp4",
