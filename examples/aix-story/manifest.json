@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "title": "AIX Story - Idea to Film",
+  "durationSeconds": 15,
+  "width": 1280,
+  "height": 720,
+  "fps": 24,
+  "frames": 360,
+  "audioTracks": 0,
+  "assets": [
+    {
+      "file": "aix-story.mp4",
+      "bytes": 27387682,
+      "sha256": "4e194e2a0f70ab9adbc83ef32efab4b096a203cadc2b92d68074da2b652dbed8"
+    },
+    {
+      "file": "shot-1-typing.png",
+      "bytes": 1090559,
+      "sha256": "4b9dbe5a2070b9d7f92112a7d91a482f07e20407f52b5e453effa29bfc7c535f"
+    },
+    {
+      "file": "shot-2-generating.png",
+      "bytes": 859686,
+      "sha256": "412b31743e44417748c8df2a09401a3cc26bfa3915e8c0520f8798deb68bbe6d"
+    },
+    {
+      "file": "shot-3-result.png",
+      "bytes": 1042531,
+      "sha256": "1bb4d9210327fa36c6c9aa262b23933f3038aeb91f2dfabbce30002f2d7d3fb1"
+    }
+  ],
+  "previewOrigin": "Frames from the reviewed native Resolve export; not original unmasked source images.",
+  "published": false
+}

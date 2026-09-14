@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "reviewedMedia": [
+    {
+      "path": "examples/aix-story/aix-story.mp4",
+      "sha256": "4e194e2a0f70ab9adbc83ef32efab4b096a203cadc2b92d68074da2b652dbed8",
+      "bytes": 27387682
+    },
+    {
+      "path": "examples/aix-story/shot-1-typing.png",
+      "sha256": "4b9dbe5a2070b9d7f92112a7d91a482f07e20407f52b5e453effa29bfc7c535f",
+      "bytes": 1090559
+    },
+    {
+      "path": "examples/aix-story/shot-2-generating.png",
+      "sha256": "412b31743e44417748c8df2a09401a3cc26bfa3915e8c0520f8798deb68bbe6d",
+      "bytes": 859686
+    },
+    {
+      "path": "examples/aix-story/shot-3-result.png",
+      "sha256": "1bb4d9210327fa36c6c9aa262b23933f3038aeb91f2dfabbce30002f2d7d3fb1",
+      "bytes": 1042531
+    }
+  ],
+  "reviewRecords": [
+    {
+      "path": "examples/aix-story/privacy-review.json",
+      "sha256": "5e198dae16e1f8991135ef0cfe06bafddc21b07bcf72e1598cd4acf51e337cd2"
+    }
+  ],
+  "policy": "Only these previously reviewed exact bytes may ship. Changed or additional media requires a new visual and metadata review."
+}

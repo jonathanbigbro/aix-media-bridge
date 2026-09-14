@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "jobId": "MY-EDIT-001",
+  "projectName": "AIX Story Demo",
+  "timelineName": "AIX Story - 15 seconds",
+  "outputDir": "../outputs/MY-EDIT-001",
+  "cases": [
+    {"key": "idea", "title": "The idea", "manifest": "../jobs/STORY-001/result.json"},
+    {"key": "create", "title": "Create with AIX", "manifest": "../jobs/STORY-002/result.json"},
+    {"key": "result", "title": "Bring it to life", "manifest": "../jobs/STORY-003/result.json"}
+  ],
+  "timeline": {"width": 1280, "height": 720, "fps": 24, "clipSeconds": 5},
+  "privacy": {},
+  "render": {"format": "mp4", "codec": "H264", "audio": false}
+}

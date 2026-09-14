@@ -1,0 +1,4 @@
+interface:
+  display_name: "AIX 媒体工作流"
+  short_description: "AIX 生成与下载，独立配音和字幕，达芬奇有声剪辑导出，保留防重复记录"
+  default_prompt: "使用 $aix-media-workflow，把参考图和创作要求整理为任务配置，在 AIX 生成并下载素材；按我的要求制作独立配音和字幕，导入达芬奇新工程剪辑并导出。"

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 2,
+  "jobId": "STORY-003",
+  "project": {
+    "key": "demo"
+  },
+  "referencePng": "../examples/aix-story/shot-1-typing.png",
+  "image": {
+    "model": "main_image",
+    "workflowId": "248",
+    "ratio": "16:9",
+    "resolution": "2k",
+    "count": 1,
+    "prompt": "The same adult man and gray T-shirt at the same desk and monitor as the reference. The monitor shows the finished mountain-and-ocean sunrise artwork in a clean AIX TV preview. The man has a small satisfied smile, one hand near the keyboard and one on the mouse. Natural daylight, realistic anatomy. No account controls, avatar, personal name, email, balance, browser profile or private information."
+  },
+  "video": {
+    "model": "1888",
+    "workflowId": "225",
+    "ratio": "16:9",
+    "resolution": "720p",
+    "duration": 5,
+    "count": 1,
+    "prompt": "One continuous five-second shot. The man studies the finished mountain-and-ocean sunrise artwork on the AIX screen, then smiles and gives a subtle satisfied nod. Camera slowly pulls back. Preserve character, clothing, desk and coherent hands. No cut, no account information or new text."
+  },
+  "photography": [
+    "\u98de\u601d XF IQ4 150MP",
+    "Cooke S4",
+    "50mm",
+    "\u0192/5.6",
+    "1/500s-\u6e05\u6670"
+  ],
+  "lighting": [
+    "\u7535\u5f71\u4e09\u70b9\u5149",
+    "45\u00b0\u4fa7\u5149",
+    "\u67d4\u96fe\u7070"
+  ],
+  "outputDir": "../outputs/STORY-003",
+  "limits": {
+    "uploads": 1,
+    "imageSubmissions": 1,
+    "videoSubmissions": 1,
+    "downloads": 1,
+    "imageAgentRequests": 1,
+    "videoAgentRequests": 1
+  }
+}

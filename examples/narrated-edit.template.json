@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 2,
+  "jobId": "MY-EDIT-001",
+  "projectName": "My voiced video",
+  "timelineName": "My 30 second timeline",
+  "outputDir": "../outputs/MY-EDIT",
+  "timeline": {
+    "width": 1280,
+    "height": 720,
+    "fps": 24,
+    "frames": 720
+  },
+  "scenes": [
+    {
+      "key": "scene-one",
+      "source": {
+        "path": "../outputs/MY-EDIT/reviewed-scene.png",
+        "sha256": "REPLACE_WITH_SHA256_OF_THIS_FILE"
+      },
+      "sourceStartFrame": 0,
+      "frames": 720,
+      "texts": [
+        {
+          "name": "Title",
+          "text": "请替换为自己的标题与字幕",
+          "size": 0.035,
+          "x": 0.5,
+          "y": 0.5,
+          "start": 0,
+          "end": 720,
+          "color": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    }
+  ],
+  "narration": {
+    "path": "../outputs/MY-EDIT/narration-r1/narration-48k.wav",
+    "sha256": "REPLACE_WITH_SHA256_OF_THIS_FILE"
+  },
+  "overlaySource": {
+    "path": "../outputs/MY-EDIT/transparent-text-carrier.png",
+    "sha256": "REPLACE_WITH_SHA256_OF_THIS_FILE"
+  },
+  "render": {
+    "format": "mp4",
+    "codec": "H264",
+    "audio": true
+  },
+  "revision": 1,
+  "previousDigest": null
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 2,
+  "jobId": "STORY-002",
+  "project": {
+    "key": "demo"
+  },
+  "referencePng": "../examples/aix-story/shot-1-typing.png",
+  "image": {
+    "model": "main_image",
+    "workflowId": "248",
+    "ratio": "16:9",
+    "resolution": "2k",
+    "count": 1,
+    "prompt": "The same adult man and gray T-shirt, same room, wooden desk and monitor as the reference. Right hand rests on the mouse, eyes on the monitor. The AIX TV creative page shows a large mountain-and-ocean sunrise preview and a simple progress bar. Realistic over-the-shoulder photograph, coherent hands. No account controls, avatar, personal name, email, balance, browser profile or private information."
+  },
+  "video": {
+    "model": "1888",
+    "workflowId": "225",
+    "ratio": "16:9",
+    "resolution": "720p",
+    "duration": 5,
+    "count": 1,
+    "prompt": "One continuous five-second shot. The man clicks the mouse once. On the AIX screen, the progress bar advances and the mountain-and-ocean sunrise preview becomes clear. Subtle camera move toward the monitor, preserve the man, wardrobe and desk. Keep AIX TV readable. No cut, no new people, no personal account information."
+  },
+  "photography": [
+    "\u98de\u601d XF IQ4 150MP",
+    "Cooke S4",
+    "50mm",
+    "\u0192/5.6",
+    "1/500s-\u6e05\u6670"
+  ],
+  "lighting": [
+    "\u7535\u5f71\u4e09\u70b9\u5149",
+    "45\u00b0\u4fa7\u5149",
+    "\u67d4\u96fe\u7070"
+  ],
+  "outputDir": "../outputs/STORY-002",
+  "limits": {
+    "uploads": 1,
+    "imageSubmissions": 1,
+    "videoSubmissions": 1,
+    "downloads": 1,
+    "imageAgentRequests": 1,
+    "videoAgentRequests": 1
+  }
+}

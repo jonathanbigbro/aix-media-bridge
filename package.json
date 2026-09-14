@@ -1,0 +1,25 @@
+{
+  "name": "aix-media-bridge",
+  "version": "0.5.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "setup": "node scripts/setup.mjs",
+    "doctor": "node scripts/doctor.mjs",
+    "bridge": "node bridge/daemon.mjs",
+    "stop": "node scripts/stop.mjs",
+    "project": "node bridge/project.mjs",
+    "media": "node bridge/media-run.mjs",
+    "edit": "python3 resolve/bridge.py",
+    "test:resolve": "python3 -m unittest discover -s tests -p 'test_*.py'",
+    "test": "node --test tests/*.test.mjs",
+    "release": "node scripts/build-release.mjs",
+    "audit": "node scripts/audit-release.mjs",
+    "test:all": "npm test && npm run test:resolve",
+    "audit:archive": "python3 scripts/verify-archive.py"
+  },
+  "license": "MIT"
+}

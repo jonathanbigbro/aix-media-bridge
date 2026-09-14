@@ -1,0 +1,22 @@
+{
+  "fps": 24,
+  "frames": 720,
+  "segments": [
+    {
+      "text": "给 Codex 一张参考图，说明你想拍什么。",
+      "startFrame": 5,
+      "endFrame": 235
+    },
+    {
+      "text": "在你的 AIX 账号里制作，核对参数并下载素材。",
+      "spokenText": "在你的 A I X 账号里制作，核对参数并下载素材。",
+      "startFrame": 245,
+      "endFrame": 475
+    },
+    {
+      "text": "进入达芬奇，完成旁白、字幕和剪辑。",
+      "startFrame": 485,
+      "endFrame": 715
+    }
+  ]
+}

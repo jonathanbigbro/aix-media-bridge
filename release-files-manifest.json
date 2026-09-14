@@ -1,0 +1,467 @@
+{
+  "version": "0.5.0",
+  "files": [
+    {
+      "path": ".agents/skills/aix-media-workflow/SKILL.md",
+      "bytes": 6573,
+      "sha256": "691a98107292d905fc9ad858c9508cb7f016d6bafbcecf5a22e6e855582cf7b5"
+    },
+    {
+      "path": ".agents/skills/aix-media-workflow/agents/openai.yaml",
+      "bytes": 390,
+      "sha256": "c65433368fc30002ce7367b230ff583672c5bc65851608ce5bcb35fd753d1ec9"
+    },
+    {
+      "path": ".agents/skills/aix-media-workflow/references/configuration.md",
+      "bytes": 2312,
+      "sha256": "79f01fb80502be1d8c6a91b820b3626c658df5817db7e23314d82e82279daa65"
+    },
+    {
+      "path": ".agents/skills/aix-media-workflow/references/narrated-production.md",
+      "bytes": 5058,
+      "sha256": "30a72a90ff49e2ae129fbe2ab513d3a441b6db10df5230362c4fa2c6c292c1dd"
+    },
+    {
+      "path": ".agents/skills/aix-media-workflow/references/recovery.md",
+      "bytes": 2596,
+      "sha256": "d3170a31ed7d224501beb22743546ba2540fde0a6e82471841a6bc6c30539c21"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 420,
+      "sha256": "4a96d62582ae1dbf5665aa4f6541beaf2bd6b9292209fa04b6df3916a680ee60"
+    },
+    {
+      "path": ".npmrc",
+      "bytes": 19,
+      "sha256": "7151cf397def0c2cb0ab65643701d27d335a72c90f775675b5f826bc7005818a"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1086,
+      "sha256": "1cf782dda763585b8b80cfd4f49bdc258f89e4b0ef95af98063205a6ca2fd21d"
+    },
+    {
+      "path": "README.md",
+      "bytes": 9541,
+      "sha256": "d05af20107642291a29eda43537dd0195031cb7693895633c32f94779afdd313"
+    },
+    {
+      "path": "audio/captions.py",
+      "bytes": 2552,
+      "sha256": "751aa27b7ef726cf593d455604605547d6ae254386088e966673196488a8446e"
+    },
+    {
+      "path": "audio/narrate.py",
+      "bytes": 3903,
+      "sha256": "b648c886ee8e978254abdf30e2aeeac6797824fe918e3b6018cb0bf6ba09551e"
+    },
+    {
+      "path": "audio/requirements.txt",
+      "bytes": 38,
+      "sha256": "33bb275274730a904ddc4632ceb166adb8b96f79f3c8edee36b45c3d89e2fe34"
+    },
+    {
+      "path": "bridge/.npmrc",
+      "bytes": 19,
+      "sha256": "7151cf397def0c2cb0ab65643701d27d335a72c90f775675b5f826bc7005818a"
+    },
+    {
+      "path": "bridge/README.md",
+      "bytes": 2089,
+      "sha256": "fec7aafc4fed2cf9e3bc2793187a485065a33b35157d2363642ba3ca095a9434"
+    },
+    {
+      "path": "bridge/baseline.mjs",
+      "bytes": 748,
+      "sha256": "c3d6eb1fba86554427b2a60860133e81d590927043b4cb5963af3141e1532648"
+    },
+    {
+      "path": "bridge/chat-evidence.mjs",
+      "bytes": 3991,
+      "sha256": "793e6fb2763195e6293224ed8e7e695fb9c89cca34b74f57ed86813f2e08e22d"
+    },
+    {
+      "path": "bridge/daemon-operations.mjs",
+      "bytes": 4287,
+      "sha256": "23d90d1fee8dd64a5f483c69163da346b08efeddeabebf03b94f8116ac091473"
+    },
+    {
+      "path": "bridge/daemon.mjs",
+      "bytes": 2005,
+      "sha256": "38cf66be8658bbd500686c1b40650d051d2373405cad4e302ef3a7808e2735a6"
+    },
+    {
+      "path": "bridge/generation-validation.mjs",
+      "bytes": 10369,
+      "sha256": "8856c2be9b8cea7a459365d9e51c9afa400cb76d02c1c5fbd7b863c174682623"
+    },
+    {
+      "path": "bridge/image-card.mjs",
+      "bytes": 7391,
+      "sha256": "dbd41a665067d94f54630a61ce6e032e83166c8863569dc35790a15f510f8954"
+    },
+    {
+      "path": "bridge/job-config.mjs",
+      "bytes": 6954,
+      "sha256": "cf2a84d91838db8e4cc1ef33b1030776b7c953ca5d564512a9bd9d61cd0de4ca"
+    },
+    {
+      "path": "bridge/job-download.mjs",
+      "bytes": 2299,
+      "sha256": "ea241b71ad847c27fda5edb16b29c55569a777776c34448459f5e214f3ea6d81"
+    },
+    {
+      "path": "bridge/job-evidence.mjs",
+      "bytes": 903,
+      "sha256": "a93d58e0da5b0b0f3babbc2f435ba381a6bc2a48366149b7fa861e55450e9265"
+    },
+    {
+      "path": "bridge/job-flow.mjs",
+      "bytes": 1093,
+      "sha256": "322a4739f59cb52ba14c293ca612d5ae0e7556b8fec486ba67b0c5665610902f"
+    },
+    {
+      "path": "bridge/job-history.mjs",
+      "bytes": 2483,
+      "sha256": "89b1d260447f805ba17f26b09131c8ebf6c39121f12771db99fd7c7f683bdee3"
+    },
+    {
+      "path": "bridge/job-lock.mjs",
+      "bytes": 2099,
+      "sha256": "2ae80b4ff659acbce5ab760cb81bb29ab3b9d5d8a8a64c9ee73dd865e1c314cc"
+    },
+    {
+      "path": "bridge/job-run.mjs",
+      "bytes": 12198,
+      "sha256": "6f11279079d9be67d80e3dc845335353f1a0bbd4c07e41fe7632c1b97964fd04"
+    },
+    {
+      "path": "bridge/job-status.mjs",
+      "bytes": 1059,
+      "sha256": "fb1b3f9cfddc15f8a4590b3846216870d292d9c89e697651d94a47e786da76a2"
+    },
+    {
+      "path": "bridge/media-ops.mjs",
+      "bytes": 62450,
+      "sha256": "0d1c411cad83c92842c76110374f58c45ae30ebdbea04df21862f34d288f2709"
+    },
+    {
+      "path": "bridge/media-run.mjs",
+      "bytes": 164,
+      "sha256": "575faf92f4467309bd22868b74d4ec0e2a19a6abae70071084d526d4070a57f1"
+    },
+    {
+      "path": "bridge/network-full.mjs",
+      "bytes": 3274,
+      "sha256": "47f915a2c74d2465ddf33830f620e0b9f613fbb62130837b4657f80a5492984d"
+    },
+    {
+      "path": "bridge/node-version.mjs",
+      "bytes": 550,
+      "sha256": "31bc528e6363f52e8be81e9d150234b5ec5b54a03de349a6a61bb7b4c1ce5b66"
+    },
+    {
+      "path": "bridge/package-lock.json",
+      "bytes": 43570,
+      "sha256": "d633fd3022b2c8f729b5ab887e506c268a47bc9b3fb41c3dd6cc3da5dae15d09"
+    },
+    {
+      "path": "bridge/package.json",
+      "bytes": 261,
+      "sha256": "0ad08f2ddf2a85bb853bbfd46c82dce487af6b38d8f9c39233c9a705db503919"
+    },
+    {
+      "path": "bridge/paths.mjs",
+      "bytes": 701,
+      "sha256": "768a7d640d50b8034e0e438bff13043b5e3035ead9b4498567d85bb57a1ae795"
+    },
+    {
+      "path": "bridge/probe-video.swift",
+      "bytes": 3461,
+      "sha256": "6ea376c9e53e3d40d34f4bc7dd83a6632ba406aa7129c9ef9cc487285adbafbb"
+    },
+    {
+      "path": "bridge/project-ops.mjs",
+      "bytes": 7117,
+      "sha256": "1396fe6ba4471dd927b682be6713cc2ac21c2f83b6c837a5fb481a9037d0ae03"
+    },
+    {
+      "path": "bridge/project-store.mjs",
+      "bytes": 1738,
+      "sha256": "8865931891d846af744dd782450266fe4396ba6d9af7a5b2d68f87e5313625df"
+    },
+    {
+      "path": "bridge/project.mjs",
+      "bytes": 1656,
+      "sha256": "6931bb9bddd4788e1dcc5a023459bc306970837bd5d43ee379af562e9e7497a2"
+    },
+    {
+      "path": "bridge/redact.mjs",
+      "bytes": 2786,
+      "sha256": "c31c989a187b4bea1616c1f0bd585bf2a73230f1a5e0e0bc5dbd13f1f603408c"
+    },
+    {
+      "path": "bridge/runtime-workflow.mjs",
+      "bytes": 474,
+      "sha256": "23c8905a44236dea5ca2ed19571feb96e5c18ceb649fa200ae7305431b38f106"
+    },
+    {
+      "path": "bridge/socket-client.mjs",
+      "bytes": 893,
+      "sha256": "c41c820c02b862322fd0e445c41f5c43e9f0aeee4404b426e124d41674433232"
+    },
+    {
+      "path": "bridge/transport.mjs",
+      "bytes": 1330,
+      "sha256": "e1831b3862c7fdac63b595f495d41693b4f196a06677abb6dcf3fa453f9f523d"
+    },
+    {
+      "path": "docs/CHANGELOG.md",
+      "bytes": 6096,
+      "sha256": "3d6e119d56895f3221c4bc61edda9c212d21ac68c337baf789f0ec7b1e7dae0b"
+    },
+    {
+      "path": "docs/CONCURRENCY.md",
+      "bytes": 4260,
+      "sha256": "285122fff62fc56cd825f4ddb130b5ce44f35bd215cff05bf05f1d948c355346"
+    },
+    {
+      "path": "docs/DAVINCI.md",
+      "bytes": 5356,
+      "sha256": "8f279f32672271d9e07aaa0786a6173c4c66db2e3c4f35f24641c7fc163d462b"
+    },
+    {
+      "path": "docs/NARRATED-VIDEO.md",
+      "bytes": 5136,
+      "sha256": "f10a65dfa1cdfb123b0f296f262d050516561d78b331631215318c66c8378d31"
+    },
+    {
+      "path": "docs/QUICKSTART.zh-CN.md",
+      "bytes": 7058,
+      "sha256": "5e45339288634b64de608a403854dec7188e004f0bf6c1fbcce3e65283dd86b2"
+    },
+    {
+      "path": "docs/RELEASING.md",
+      "bytes": 3468,
+      "sha256": "c11006eadc2560c61b86fe5a2796b5a9cc8830028c68636a59ffc4e632491742"
+    },
+    {
+      "path": "docs/VALIDATION.md",
+      "bytes": 18775,
+      "sha256": "54b69cd773723a28639ca8f872fa7e5369fc45a3601f090d7204ab43dd4c037e"
+    },
+    {
+      "path": "examples/aix-story/README.md",
+      "bytes": 1859,
+      "sha256": "57fc9b778a00191fce28694ebb0a8e4cf5d76e779a81f356ba839de85f2149e6"
+    },
+    {
+      "path": "examples/aix-story/aix-story.mp4",
+      "bytes": 27387682,
+      "sha256": "4e194e2a0f70ab9adbc83ef32efab4b096a203cadc2b92d68074da2b652dbed8"
+    },
+    {
+      "path": "examples/aix-story/manifest.json",
+      "bytes": 940,
+      "sha256": "1945e977bfa0f3bf4e35a367a455d18291c40297ffb16259a1f7e03e2bd7f5f2"
+    },
+    {
+      "path": "examples/aix-story/privacy-review.json",
+      "bytes": 1163,
+      "sha256": "5e198dae16e1f8991135ef0cfe06bafddc21b07bcf72e1598cd4acf51e337cd2"
+    },
+    {
+      "path": "examples/aix-story/shot-1-typing.png",
+      "bytes": 1090559,
+      "sha256": "4b9dbe5a2070b9d7f92112a7d91a482f07e20407f52b5e453effa29bfc7c535f"
+    },
+    {
+      "path": "examples/aix-story/shot-2-generating.png",
+      "bytes": 859686,
+      "sha256": "412b31743e44417748c8df2a09401a3cc26bfa3915e8c0520f8798deb68bbe6d"
+    },
+    {
+      "path": "examples/aix-story/shot-3-result.png",
+      "bytes": 1042531,
+      "sha256": "1bb4d9210327fa36c6c9aa262b23933f3038aeb91f2dfabbce30002f2d7d3fb1"
+    },
+    {
+      "path": "examples/demo-reference.png",
+      "bytes": 2622,
+      "sha256": "8beafafef7e343e4d20a6d879e6e18bff397b9d463eb5e22bd07cbcdc22d45b0"
+    },
+    {
+      "path": "examples/media-job.template.json",
+      "bytes": 1230,
+      "sha256": "3192a44a373ed63322dc6ec7ad2b9b5bcc0a3171e0b739f2b4c483572cb675b5"
+    },
+    {
+      "path": "examples/narrated-edit.template.json",
+      "bytes": 1215,
+      "sha256": "bfb32e3734625d6ce95318806f524c3913f02dd93c4f3ee7db89d3263a9b298e"
+    },
+    {
+      "path": "examples/narration.template.json",
+      "bytes": 538,
+      "sha256": "f09d74f25f900db4a17101b3212d9cbd818a868b4ad6ea9d6a687ee2f6c5407c"
+    },
+    {
+      "path": "examples/resolve-job.template.json",
+      "bytes": 624,
+      "sha256": "a7353276e85ad37bb537fa0fdcd8a282f6c3fc4fb4a6f32d197e097e81899464"
+    },
+    {
+      "path": "examples/story/shot-1.job.json",
+      "bytes": 1592,
+      "sha256": "40a7681142ba5d6c49db7f1ca1720218cc222285d262815d3a6b64da34f4110d"
+    },
+    {
+      "path": "examples/story/shot-2.job.json",
+      "bytes": 1625,
+      "sha256": "c4a5e1001dc8e5f1b36575aae0304ff0c706fb8a969a0b003f44d476e6176f3b"
+    },
+    {
+      "path": "examples/story/shot-3.job.json",
+      "bytes": 1591,
+      "sha256": "3eadeab246b3a62d0c3fa540e4ae93b79800c3c2be2aeca1c659754f8a3146da"
+    },
+    {
+      "path": "package.json",
+      "bytes": 785,
+      "sha256": "287efdd4c68fc9d5553a1ec23076e29e1d5d94a1cae03dba5b38c6d41cdef88a"
+    },
+    {
+      "path": "resolve/bridge.py",
+      "bytes": 12142,
+      "sha256": "00e603d93bedb8173090bb5df765de05d166c4d7f49fc1c5194fbdfb96bc3f7e"
+    },
+    {
+      "path": "resolve/common.py",
+      "bytes": 7028,
+      "sha256": "188db392e9713defd05303a59a057344d295944c5d1e02f79ed939f81b75488c"
+    },
+    {
+      "path": "resolve/narrated.py",
+      "bytes": 23066,
+      "sha256": "f585817da0b4a5ddeeb966e8a3fa1fd43639c5965d28d7e8a351d071b5d41484"
+    },
+    {
+      "path": "resolve/native.py",
+      "bytes": 12035,
+      "sha256": "de5af328e02b4382a6d65e3e538f794976f48e9adab610d4fbbefda1d7983c24"
+    },
+    {
+      "path": "resolve/probe-audio.swift",
+      "bytes": 3528,
+      "sha256": "b2d988bb9f94d21fffa53b869fec5d12c7bfdc52702be42e02226105ecfc4532"
+    },
+    {
+      "path": "resolve/review-video.swift",
+      "bytes": 4616,
+      "sha256": "b53f0ad868e78225ac3949d6a3d4fbe159e32ee7eb515639bbc36826c242d120"
+    },
+    {
+      "path": "scripts/audit-release.mjs",
+      "bytes": 6166,
+      "sha256": "c5602357f229437d71af062817f2bd8b166fab411c1ad92626231d20a02f05fb"
+    },
+    {
+      "path": "scripts/build-release.mjs",
+      "bytes": 4281,
+      "sha256": "dbfdc820729c6575a4a9a45296134163485a420cb2847245245121e66f06d107"
+    },
+    {
+      "path": "scripts/doctor.mjs",
+      "bytes": 2053,
+      "sha256": "e94ceb2643af8008f5c6924e2e2d27f2032ae86f95fea865e0bb457935451fa9"
+    },
+    {
+      "path": "scripts/make-demo-reference.mjs",
+      "bytes": 1363,
+      "sha256": "ebfed5a049c21b6ce4581b5896dbebb3872d2278363186ce44f6c01537e53e11"
+    },
+    {
+      "path": "scripts/probe-video-frames.swift",
+      "bytes": 1840,
+      "sha256": "6557eaab31d05ea32c59fcb2d7e7a90f65e2bd12aa4b561a9a9bf0581c9ee13c"
+    },
+    {
+      "path": "scripts/release-files.json",
+      "bytes": 2728,
+      "sha256": "abc0c5d03470a087d3b1f4b6bc2ce02c37567d5a2b1866cf8503c53c2816ddc8"
+    },
+    {
+      "path": "scripts/release-media.json",
+      "bytes": 1062,
+      "sha256": "05c9017c30e72a98cd56051cf8ea81ad4da7c26331817adedfb9d93f7d161fac"
+    },
+    {
+      "path": "scripts/setup.mjs",
+      "bytes": 1149,
+      "sha256": "d4bad7cfadab9ca58a2bf4304c1aacf57c553b404320d02c8cb85a88461eb20d"
+    },
+    {
+      "path": "scripts/stop.mjs",
+      "bytes": 173,
+      "sha256": "9ffd2d858847409b7bd40b8799c1e20bca4c08a19ad2a0999a7b9414e0d7d533"
+    },
+    {
+      "path": "scripts/verify-archive.py",
+      "bytes": 3475,
+      "sha256": "ceeaa8e44e473c9fc47390248cef738a932121629c1b897113a604080afb8088"
+    },
+    {
+      "path": "tests/chat-recovery.test.mjs",
+      "bytes": 6136,
+      "sha256": "b2723ecf454f36867ba2336ea3caa9f2c58e9313e076e9c54bee0c857d896cf0"
+    },
+    {
+      "path": "tests/concurrency.test.mjs",
+      "bytes": 12708,
+      "sha256": "e7c2fa62e9f0782b196839746b76c73a34da988e62c13573c66fe67f7d339975"
+    },
+    {
+      "path": "tests/privacy.test.mjs",
+      "bytes": 3263,
+      "sha256": "bb459d074ca99c359789beab6f1f43f1e24f3c67dcbd9009ed696b95545a1675"
+    },
+    {
+      "path": "tests/release-fixes.test.mjs",
+      "bytes": 23803,
+      "sha256": "684872e2540763462d5a21104e5db35cb6e376d6280344e1961c45f8e7c46a0f"
+    },
+    {
+      "path": "tests/test_narrated.py",
+      "bytes": 5938,
+      "sha256": "91db2b99bec80daf47c3e2aad64189717950704e75632f74094bcfa0350a7e44"
+    },
+    {
+      "path": "tests/test_resolve.py",
+      "bytes": 5660,
+      "sha256": "d7768118caf848b48d372da3aa4367e87506aa524919ebc2575515792d14629b"
+    },
+    {
+      "path": "tests/workflow.test.mjs",
+      "bytes": 9070,
+      "sha256": "574beb86b936b54dc5478a79bdab36954ec367e9a30c2f98d93095c4ae7c771e"
+    }
+  ],
+  "reviewedMedia": [
+    "examples/aix-story/aix-story.mp4",
+    "examples/aix-story/shot-1-typing.png",
+    "examples/aix-story/shot-2-generating.png",
+    "examples/aix-story/shot-3-result.png"
+  ],
+  "excluded": [
+    "original Git history",
+    "account bindings",
+    "runtime logs",
+    "job configs and ledgers",
+    "screenshots",
+    "original or unreviewed generated media",
+    "native project backups",
+    "dependencies",
+    "compiled binaries"
+  ]
+}

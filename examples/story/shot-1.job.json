@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 2,
+  "jobId": "STORY-001",
+  "project": {
+    "key": "demo"
+  },
+  "referencePng": "../examples/aix-story/shot-1-typing.png",
+  "image": {
+    "model": "main_image",
+    "workflowId": "248",
+    "ratio": "16:9",
+    "resolution": "2k",
+    "count": 1,
+    "prompt": "The same adult man from the reference, short black hair and a gray T-shirt, seated at the same wooden desk and monitor, both hands poised naturally above the keyboard. Monitor displays a clean dark AIX creative website with a large readable AIX TV logo. Realistic photography, morning window light, coherent hands. No account controls, avatar, personal name, email, balance, browser profile, or private information."
+  },
+  "video": {
+    "model": "1888",
+    "workflowId": "225",
+    "ratio": "16:9",
+    "resolution": "720p",
+    "duration": 5,
+    "count": 1,
+    "prompt": "One continuous five-second shot. The man types naturally on the keyboard while looking at the AIX website. Gentle camera push-in, preserve identity, clothing, room and readable AIX TV branding. Natural small hand movements. No cut, no new person, no account information."
+  },
+  "photography": [
+    "\u98de\u601d XF IQ4 150MP",
+    "Cooke S4",
+    "50mm",
+    "\u0192/5.6",
+    "1/500s-\u6e05\u6670"
+  ],
+  "lighting": [
+    "\u7535\u5f71\u4e09\u70b9\u5149",
+    "45\u00b0\u4fa7\u5149",
+    "\u67d4\u96fe\u7070"
+  ],
+  "outputDir": "../outputs/STORY-001",
+  "limits": {
+    "uploads": 1,
+    "imageSubmissions": 1,
+    "videoSubmissions": 1,
+    "downloads": 1,
+    "imageAgentRequests": 1,
+    "videoAgentRequests": 1
+  }
+}

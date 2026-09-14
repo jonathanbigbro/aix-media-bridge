@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 2,
+  "jobId": "MY-MEDIA-001",
+  "project": {
+    "key": "demo"
+  },
+  "referencePng": "../examples/demo-reference.png",
+  "image": {
+    "model": "main_image",
+    "workflowId": "248",
+    "ratio": "16:9",
+    "resolution": "2k",
+    "count": 1,
+    "prompt": "A single matte teal ceramic sphere on an ivory tabletop. Preserve the reference color and shape. Realistic studio product photography, soft side lighting, no people, no text, no logos."
+  },
+  "video": {
+    "model": "1888",
+    "workflowId": "225",
+    "ratio": "16:9",
+    "resolution": "720p",
+    "duration": 5,
+    "count": 1,
+    "prompt": "One continuous five-second product shot using the newly generated image. Very slow camera push-in; the teal sphere stays still. Preserve shape, lighting and background. No cuts or new objects."
+  },
+  "photography": [
+    "飞思 XF IQ4 150MP",
+    "Cooke S4",
+    "50mm",
+    "ƒ/5.6",
+    "1/500s-清晰"
+  ],
+  "lighting": [
+    "电影三点光",
+    "45°侧光",
+    "柔雾灰"
+  ],
+  "outputDir": "../outputs/MY-MEDIA-001",
+  "limits": {
+    "uploads": 1,
+    "imageSubmissions": 1,
+    "videoSubmissions": 1,
+    "downloads": 1,
+    "imageAgentRequests": 1,
+    "videoAgentRequests": 1
+  }
+}
