@@ -1,8 +1,8 @@
 ---
 name: aix-media-workflow
-description: 在已登录的 AIX 平台创建或选择画布，把本地 PNG 和创作要求制作成 PRO 图片、Seedance 视频并原生下载，可继续导入 DaVinci Resolve 新工程剪辑和导出；使用本项目 CLI，支持防重复恢复、独立配音与可编辑字幕。
+description: 在已登录的 AIX 平台创建或选择画布，把本地 PNG 和创作要求制作成 PRO 图片、Seedance 视频并原生下载，可继续本地剪辑、配音、音效与字幕；使用本项目 CLI，支持防重复恢复，并关联白模拆解和画布整理技能。
 metadata:
-  version: "0.5.0"
+  version: "0.6.0"
 ---
 
 先解析本 SKILL.md 的真实路径，从其所在目录向上三级即仓库根目录。在该目录使用 CLI；输入约束见 [references/configuration.md](references/configuration.md)，首次安装见仓库 README。
@@ -47,7 +47,14 @@ status 为本地只读快照，不需要连接桥、不绑定浏览器、不改�
 
 成功后读取 result.json 和输出 manifest，核对参考→图片→视频映射、真实参数、哈希与完整解码。分别报告容器、视频轨和浏览器时长；链路完成与严格整秒符合是两项结论，不自动裁剪、转码或重生。需要画面质量判断时进行本地抽帧或播放审阅，明确检查范围。
 
-当前范围：macOS、Chrome、AIX 简体中文界面；一个 PNG、单张 PRO、Seedance2.0（真人）4 或 5 秒／16:9／720p、一次原生视频下载。摄影灯光为模板固定组合。其他模型、批量、多参考、团队画布管理和服务端取消恢复不支持或未验证。不能要求画布含特定旧素材或固定节点总数。
+公开生成 CLI 范围：macOS、Chrome、AIX 简体中文界面；一个 PNG、单张 PRO、Seedance2.0（真人）4 或 5 秒／16:9／720p、一次原生视频下载。摄影灯光为模板固定组合。其他模型、批量、多参考、团队画布管理和服务端取消恢复不支持或未验证。不能要求画布含特定旧素材或固定节点总数。
+
+## 参考视频、白模和后期
+
+- 需要根据参考视频建模时，使用同包的 [blender-reference-blockout](../blender-reference-blockout/SKILL.md)。
+- 多模态引用、规格限制、失败重试及生成质量诊断，读取 [references/reference-driven-production.md](references/reference-driven-production.md)。其中区分已发布 CLI 与开发期实验，不将实验能力自动扩展为公共支持范围。
+- 重剪、动作连续性、Logo 片尾、背景音乐和明确音效，读取 [references/editing-and-sound.md](references/editing-and-sound.md)。用户要求后期调整时复用已有素材，不自动重新生成视频。
+- 用户要求整理 AIX 画布时，使用同包的 [aix-canvas-organizer](../aix-canvas-organizer/SKILL.md)，以最终剪辑来源分类，备份、移动、保存并重新打开验证。
 
 ## 可选：独立配音、字幕与有声成片
 

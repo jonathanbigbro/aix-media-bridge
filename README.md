@@ -4,7 +4,21 @@
 
 AIX Media Bridge 是一套给 Codex 使用的视频制作 Skill，带有配套的本地工具。你提供参考图，说明想拍什么、给谁看、希望是什么风格，Codex 就可以按照这套流程，在你自己的 AIX 账号里生成素材，再把素材送进 DaVinci Resolve，制作成片。
 
-**当前为 macOS 预览版。** [下载 0.5.0](https://github.com/jonathanbigbro/aix-media-bridge/releases/tag/v0.5.0) · [中文上手指南](docs/QUICKSTART.zh-CN.md) · [查看案例](examples/aix-story/README.md)
+**当前为 macOS 预览版。** [下载 0.6.0](https://github.com/jonathanbigbro/aix-media-bridge/releases/tag/v0.6.0) · [中文上手指南](docs/QUICKSTART.zh-CN.md) · [查看案例](examples/aix-story/README.md)
+
+## 0.6.0：参考拆解、后期验收与画布整理
+
+本版包含三个可独立调用的技能，实际项目素材和账号数据不随包发布：
+
+| 技能 | 用途 |
+|---|---|
+| [aix-media-workflow](.agents/skills/aix-media-workflow/SKILL.md) | 原有生成/下载/恢复，加上多模态引用经验、帧级后期、音乐与动作音效验收 |
+| [blender-reference-blockout](.agents/skills/blender-reference-blockout/SKILL.md) | 参考片镜头拆解、目标主体白模、部件绑定、接触和时间采样检查 |
+| [aix-canvas-organizer](.agents/skills/aix-canvas-organizer/SKILL.md) | 根据成片来源分类画布，保留素材和连线，备份并验证保存后的布局 |
+
+白模技能附带灰度诊断帧的节奏检查脚本。画布技能附带布局计划、原页面状态校验和重新加载后的比对工具；浏览器操作通过当前可用的 Chrome 工具完成。音轨存在不代表重要音效可辨识，新增指南要求分轨、按动作对齐并区分技术验收与试听。
+
+公开生成 CLI 的规格范围仍维持 schema 2。开发期的竖屏、多参考和较长视频经验已整理成指导，但实验性生成适配器不包含在本版，不能直接把这些参数塞进旧配置。
 
 ## 少做一些工具之间的来回操作
 
@@ -54,7 +68,7 @@ AIX Media Bridge 是一套给 Codex 使用的视频制作 Skill，带有配套�
 
 有声剪辑目前验证的是 30 秒、1280×720、24fps，使用 DaVinci Resolve Studio 19。其他模型、批量任务、多参考图、Windows/Linux，以及其他 Resolve 版本尚未验证。
 
-本机已经完成 AIX 生成与下载，也完成了有声达芬奇工程和导出。实测中仍有需要排查、修复后继续运行的情况；遇到平台改版或无法确认的异常，可能需要介入处理。91 项自动测试与同机安装检查已通过，另一台电脑和新账号尚未实测。具体记录见 [验收范围](docs/VALIDATION.md)。
+本机已经完成 AIX 生成与下载，也完成了有声达芬奇工程和导出。实测中仍有需要排查、修复后继续运行的情况；遇到平台改版或无法确认的异常，可能需要介入处理。另一台电脑和新账号尚未实测。本版测试和检查结果见 [验收范围](docs/VALIDATION.md)。
 
 <details>
 <summary>首次安装的环境要求和命令</summary>

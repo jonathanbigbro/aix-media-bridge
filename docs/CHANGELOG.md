@@ -1,3 +1,12 @@
+# 0.6.0 — macOS preview
+
+- Added a reusable Blender reference blockout skill with local-coordinate attachment identity, contact checks and continuous-time animation guidance.
+- Added a standard-library cadence diagnostic for FFmpeg PGM sequences; distinguishes repeated-frame evidence from intentional holds and subjective motion quality.
+- Added an AIX canvas organization skill with exhaustive classification, pinned layout plans, stale-state rejection, idempotent recognition and reload verification.
+- Extended the media skill with reference-role separation, input capability checks, terminal-failure lineage, frame-indexed editing, visible-logo sizing, independent foley and asset-specific license records.
+- Generalized all new guidance and synthetic tests. No private project media, prompts, identifiers, layout snapshots or development Git history are included.
+- The published generation CLI remains schema 2; development-only multi-reference generation adapters are not shipped.
+
 ## 0.5.0 — macOS preview: narration, captions and native voiced export
 
 - Separate edge-tts narration retains originals, word timings and 48 kHz PCM; no AIX calls.

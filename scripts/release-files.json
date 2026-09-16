@@ -87,5 +87,16 @@
   "examples/narration.template.json",
   "examples/narrated-edit.template.json",
   ".agents/skills/aix-media-workflow/references/narrated-production.md",
-  ".agents/skills/aix-media-workflow/references/recovery.md"
+  ".agents/skills/aix-media-workflow/references/recovery.md",
+  ".agents/skills/blender-reference-blockout/SKILL.md",
+  ".agents/skills/blender-reference-blockout/references/model-and-motion.md",
+  ".agents/skills/blender-reference-blockout/agents/openai.yaml",
+  ".agents/skills/blender-reference-blockout/scripts/audit_cadence.py",
+  ".agents/skills/aix-canvas-organizer/SKILL.md",
+  ".agents/skills/aix-canvas-organizer/agents/openai.yaml",
+  ".agents/skills/aix-canvas-organizer/scripts/layout.mjs",
+  ".agents/skills/aix-media-workflow/references/reference-driven-production.md",
+  ".agents/skills/aix-media-workflow/references/editing-and-sound.md",
+  "tests/canvas-layout.test.mjs",
+  "tests/test_cadence.py"
 ]

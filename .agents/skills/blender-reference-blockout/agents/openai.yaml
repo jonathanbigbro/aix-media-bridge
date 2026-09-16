@@ -1,0 +1,4 @@
+interface:
+  display_name: "Blender 参考视频白模拆解"
+  short_description: "从参考片拆解镜头与空间，以目标主体白模验证绑定、接触、动作采样和运镜"
+  default_prompt: "使用 $blender-reference-blockout，拆解参考视频并为目标主体建立可编辑白模和运动参考，检查接触与连续性。"

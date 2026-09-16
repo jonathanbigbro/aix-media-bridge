@@ -1,3 +1,27 @@
+# Validation record — 0.6.0 macOS preview
+
+Validation date: 2026-09-16. This update adds three reusable skill entry points, a reference-motion cadence checker, an offline canvas-layout planner and production guidance. Project-specific subjects, brand names, prompts, media, canvas identifiers and private snapshots from the source work are excluded. The four previously approved public example media retain their original pinned bytes.
+
+| Layer | Observed scope |
+|---|---|
+| Clean same-machine setup | Installed locked dependencies and compiled all four Swift utilities in a separate checkout of the already-public repository; existing macOS API deprecation warnings remain |
+| Automated tests | 74 Node + 28 Python = 102 passing, zero failures; includes 7 new layout tests and 4 new cadence tests |
+| Skill structure | All three SKILL.md files passed the skill validator |
+| Cadence CLI | FFmpeg-generated 48-frame fixtures: continuous motion produced zero identical neighbors; 12 fps motion held in a 24 fps sequence produced 24 repeated frames |
+| Canvas helper | Synthetic browser/store tests verify complete assignment, overlap rejection, state/asset/parameter protection, idempotent reapplication, container-only regrouping and reload comparison with float rounding and rebuilt edge IDs |
+| Local doctor | All nine environment/tool checks passed; this isolated checkout has no running bridge |
+| Resolve doctor | No supported running local scripting connection was available; returned OPEN_RESOLVE_AND_ENABLE_SUPPORTED_LOCAL_SCRIPTING. No new Resolve render is claimed |
+| Production boundary | Prior native canvas organization informed the method. The newly packaged helper itself has not been run on a real canvas; no new AIX upload, generation, download or bridge restart was performed for this release |
+| Not established | A fresh computer/account, future AIX private-store compatibility, or automatic artistic/subjective audio acceptance |
+
+Environment: macOS 14.6.1 arm64, Node.js 22.16.0, Python 3.9.6, Apple Swift 6.0.3. Only skill helpers, tests, documentation and release metadata changed. The published generation adapters and dependency versions remain those of the preceding public main branch. Development-only multi-reference, portrait and extended-duration generation adapters are not part of this package; the public schema 2 remains unchanged.
+
+Layout checks protect node data, source information, target media fields, generation parameters, canvas identity and node-to-node connection contents. Position rounding and server-rebuilt connection IDs are representation allowances. Group-connected edges require manual planning; generation or unsaved edits block application. Checks do not prove that a future frontend method with the same name still has the same semantics. Native save, re-open and visual inspection remain required.
+
+Cadence diagnostics use downscaled grayscale copies. Exact repeats can be intentional, and their absence does not prove natural motion. Audio decode/level checks do not prove that a requested action sound is recognizable or that an asset has a commercial license. The new references make those review boundaries explicit.
+
+The release uses 100 allowlisted files plus a generated hash manifest. Private development history is not imported: publication continues from a clean clone of the existing public history. Content, approved-media hashes, archive membership/CRC/metadata, fresh extraction and the publication Git tree/history are checked during packaging; machine-readable audit reports accompany the release. Earlier distributions remain separate and immutable.
+
 # Validation record — 0.5.0 macOS preview
 
 This release extracts the real narration, captions and Resolve workflow into reusable modules and the project Skill. It retains the sealed 0.4.2 release and its historical validation below. Technical completion and editorial satisfaction are separate: the current 30-second intro is a private workflow sample, not an approved promotional example.

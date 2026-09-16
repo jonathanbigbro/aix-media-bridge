@@ -1,20 +1,40 @@
 {
-  "version": "0.5.0",
+  "version": "0.6.0",
   "files": [
     {
+      "path": ".agents/skills/aix-canvas-organizer/SKILL.md",
+      "bytes": 4176,
+      "sha256": "a55d05c3447d6878b9891d0475fbac345b1d0c6429e0f34a383d2f9d72e87ad5"
+    },
+    {
+      "path": ".agents/skills/aix-canvas-organizer/agents/openai.yaml",
+      "bytes": 331,
+      "sha256": "63b6856c0a6851b19de9e7a389e92f02cdd16ea2fce6dd355626581f66ff72b0"
+    },
+    {
+      "path": ".agents/skills/aix-canvas-organizer/scripts/layout.mjs",
+      "bytes": 10292,
+      "sha256": "f4329f1b392663b7c06102a008e8afb1c1e042fab441b591028f54e841168c0e"
+    },
+    {
       "path": ".agents/skills/aix-media-workflow/SKILL.md",
-      "bytes": 6573,
-      "sha256": "691a98107292d905fc9ad858c9508cb7f016d6bafbcecf5a22e6e855582cf7b5"
+      "bytes": 7438,
+      "sha256": "2fb79fa8c5c924288d2800f0a51059b08ae5fb0ffcdf302e82ffb9a2ebf3ac27"
     },
     {
       "path": ".agents/skills/aix-media-workflow/agents/openai.yaml",
-      "bytes": 390,
-      "sha256": "c65433368fc30002ce7367b230ff583672c5bc65851608ce5bcb35fd753d1ec9"
+      "bytes": 393,
+      "sha256": "6313dab555fac297f47e3b00d8701ef8b9d10cb894fca4c6082ffbec9ef79b4f"
     },
     {
       "path": ".agents/skills/aix-media-workflow/references/configuration.md",
       "bytes": 2312,
       "sha256": "79f01fb80502be1d8c6a91b820b3626c658df5817db7e23314d82e82279daa65"
+    },
+    {
+      "path": ".agents/skills/aix-media-workflow/references/editing-and-sound.md",
+      "bytes": 3280,
+      "sha256": "a4827e0440322e371a7cd539af4821e9ac24d2c2ae52ea34e147ad4567728d20"
     },
     {
       "path": ".agents/skills/aix-media-workflow/references/narrated-production.md",
@@ -25,6 +45,31 @@
       "path": ".agents/skills/aix-media-workflow/references/recovery.md",
       "bytes": 2596,
       "sha256": "d3170a31ed7d224501beb22743546ba2540fde0a6e82471841a6bc6c30539c21"
+    },
+    {
+      "path": ".agents/skills/aix-media-workflow/references/reference-driven-production.md",
+      "bytes": 3403,
+      "sha256": "39bd3244470ceebdf952279e9e9233f4a5e947d20aa071919484d3cfee336547"
+    },
+    {
+      "path": ".agents/skills/blender-reference-blockout/SKILL.md",
+      "bytes": 3298,
+      "sha256": "8fae4382b2c810f8b14f95e9f217a0a41f3d0542a5cecde99d5502c78dc7ce49"
+    },
+    {
+      "path": ".agents/skills/blender-reference-blockout/agents/openai.yaml",
+      "bytes": 348,
+      "sha256": "fb8dc44786b7945b6a3365453510cf164343b35b791008ed5f78dde981109f1a"
+    },
+    {
+      "path": ".agents/skills/blender-reference-blockout/references/model-and-motion.md",
+      "bytes": 2795,
+      "sha256": "0fd1916d681d09c918d20c843a53c4ea0419b2d9da26a2a8391f9be78a580c29"
+    },
+    {
+      "path": ".agents/skills/blender-reference-blockout/scripts/audit_cadence.py",
+      "bytes": 2730,
+      "sha256": "e1b2f402fcfeefdda23d8fa91e78adbf118f62172c3a796fb1410660b2088c97"
     },
     {
       "path": ".gitignore",
@@ -43,8 +88,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 6942,
-      "sha256": "4076825b4ce7c1cf85db9002f60066d1776079caabf77ceadc0384a285fd34d2"
+      "bytes": 8152,
+      "sha256": "1767b5a1a8c60f8cdf190377a35776b1a9f2cfe505dd68ab107e82aa68a906f1"
     },
     {
       "path": "audio/captions.py",
@@ -164,12 +209,12 @@
     {
       "path": "bridge/package-lock.json",
       "bytes": 43570,
-      "sha256": "d633fd3022b2c8f729b5ab887e506c268a47bc9b3fb41c3dd6cc3da5dae15d09"
+      "sha256": "bfcd8535941109ebb18782103503d622d6088613e14985595622ade2e291fb07"
     },
     {
       "path": "bridge/package.json",
       "bytes": 261,
-      "sha256": "0ad08f2ddf2a85bb853bbfd46c82dce487af6b38d8f9c39233c9a705db503919"
+      "sha256": "ba6660fd3e2f4b21be925b05fc59bdf16abcc2d6a528207e3ba290277460ea5d"
     },
     {
       "path": "bridge/paths.mjs",
@@ -218,8 +263,8 @@
     },
     {
       "path": "docs/CHANGELOG.md",
-      "bytes": 6096,
-      "sha256": "3d6e119d56895f3221c4bc61edda9c212d21ac68c337baf789f0ec7b1e7dae0b"
+      "bytes": 7088,
+      "sha256": "b99e56aa000dcaf51487922427aa6bd143f1f58f964354cce4873439fc79d301"
     },
     {
       "path": "docs/CONCURRENCY.md",
@@ -238,18 +283,18 @@
     },
     {
       "path": "docs/QUICKSTART.zh-CN.md",
-      "bytes": 7099,
-      "sha256": "e1a4f08462d70c553c6d84a7d92cf07dc47ea6a93e934406ab63db740a2ca591"
+      "bytes": 7263,
+      "sha256": "b70185681f503f5dfaf6a1d9739072aaffe99194d6ae61e070f314cd5d4ee7c1"
     },
     {
       "path": "docs/RELEASING.md",
-      "bytes": 3468,
-      "sha256": "c11006eadc2560c61b86fe5a2796b5a9cc8830028c68636a59ffc4e632491742"
+      "bytes": 4149,
+      "sha256": "55ed3f8dd7e1a2a32d4f2d376c5e900732c9e704b08c16856a768a762610e4f5"
     },
     {
       "path": "docs/VALIDATION.md",
-      "bytes": 18775,
-      "sha256": "54b69cd773723a28639ca8f872fa7e5369fc45a3601f090d7204ab43dd4c037e"
+      "bytes": 22405,
+      "sha256": "a8b0e56bc4c6b1ba8ce7c82b7496400f40bb2477cb4e480c29ada0fd8c5a499d"
     },
     {
       "path": "examples/aix-story/README.md",
@@ -329,7 +374,7 @@
     {
       "path": "package.json",
       "bytes": 785,
-      "sha256": "287efdd4c68fc9d5553a1ec23076e29e1d5d94a1cae03dba5b38c6d41cdef88a"
+      "sha256": "374c5832b01c8503439da41684bd318d7babca8292f7b604b4d3b643f78dd03d"
     },
     {
       "path": "resolve/bridge.py",
@@ -388,8 +433,8 @@
     },
     {
       "path": "scripts/release-files.json",
-      "bytes": 2728,
-      "sha256": "abc0c5d03470a087d3b1f4b6bc2ce02c37567d5a2b1866cf8503c53c2816ddc8"
+      "bytes": 3383,
+      "sha256": "dda1a0e854336ec59fc0c8210792358d980358475c11435761cc6e1c56a1556d"
     },
     {
       "path": "scripts/release-media.json",
@@ -412,6 +457,11 @@
       "sha256": "ceeaa8e44e473c9fc47390248cef738a932121629c1b897113a604080afb8088"
     },
     {
+      "path": "tests/canvas-layout.test.mjs",
+      "bytes": 4956,
+      "sha256": "2075f32b4bd14a74cefc6c45156872f7ea2a5643484e6367bca420aca2c5f189"
+    },
+    {
       "path": "tests/chat-recovery.test.mjs",
       "bytes": 6136,
       "sha256": "b2723ecf454f36867ba2336ea3caa9f2c58e9313e076e9c54bee0c857d896cf0"
@@ -430,6 +480,11 @@
       "path": "tests/release-fixes.test.mjs",
       "bytes": 23803,
       "sha256": "684872e2540763462d5a21104e5db35cb6e376d6280344e1961c45f8e7c46a0f"
+    },
+    {
+      "path": "tests/test_cadence.py",
+      "bytes": 2035,
+      "sha256": "f5e39e1f90abe7e9042772650ce19a7c60fe9151bd0c442f14989d3e7dcca5d8"
     },
     {
       "path": "tests/test_narrated.py",

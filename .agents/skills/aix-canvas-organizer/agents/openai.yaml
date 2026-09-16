@@ -1,0 +1,4 @@
+interface:
+  display_name: "AIX 画布素材整理"
+  short_description: "按成片来源分区整理 AIX 素材，保留媒体、参数与连线，并验证保存后的布局"
+  default_prompt: "使用 $aix-canvas-organizer，将当前成片采用及直接参考素材与历史素材分区整理，保存并重新打开验证。"
